@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <stack>
 
 using namespace std;
@@ -18,7 +18,7 @@ int main()
     string expr[]
     {
         "([x-y-z} * [x + 2y) - {z + 4x)]", "({x-y-z} * [x + 2y] - (z + 4x))",
-     //   "(2 + 3 + (8 - 4 * (1 + 9))", "(2 + 3) + 8) - (4 * ((1 + 9))"
+        //   "(2 + 3 + (8 - 4 * (1 + 9))", "(2 + 3) + 8) - (4 * ((1 + 9))"
     };
     int errorPos;
     int const size = 3;
@@ -43,6 +43,9 @@ int main()
         }
         cout << endl;
     }
+
+    delete[] arrayOpenBrackets;
+    delete[] arrayCloseBrackets;
 
     cout << endl;
     return 0;
